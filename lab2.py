@@ -11,17 +11,17 @@ def calc_average(numbers):
     total = sum(numbers)  
     average = total / len(numbers)  
     print("Average is:", average)
-    
+    return [average]
 def find_min_max(numbers):
     min_value = min(numbers)
     max_value = max(numbers)
     print("Minimum value:", min_value)
     print("Maximum value:", max_value)
-
+    return [min_value,max_value]
 def sort_temperature(numbers):
-    numbers.sort()
-    print("Sorted floats:", numbers)
-
+    sorted_floats = numbers.sort()
+    print("Sorted floats:", sorted_floats)
+    return [sorted_floats]
 def calc_median_temperature(numbers):
     sorted_numbers = sorted(numbers)
     length = len(sorted_numbers)
@@ -33,7 +33,7 @@ def calc_median_temperature(numbers):
         median = sorted_numbers[length // 2]
     
     print("Median temperature is" , median )
-
+    return [median]
 def main():
     display_main_menu()
     numbers = get_user_input()
@@ -45,5 +45,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
